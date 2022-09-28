@@ -1,0 +1,11 @@
+<h1>User info</h1>
+<h2><%= @user.name %></h2>
+<p>Weight: <%= @user.weight%></p>
+<p>Height: <%= @user.height %></p>
+<a href="/users">Back to all users</a>
+
+<a href="/users/<%= @user.id %>/edit">Edit user</a>
+
+<div>
+<a href="/users/<%= @user.id %>" data-turbo-method="delete">Destroy user</a>
+</div>

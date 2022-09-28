@@ -1,0 +1,13 @@
+<h1>All Users</h1>
+<% @users.each do |user| %>
+  <h2><%= user.name %></h2>
+  <p>name: <%= user.name %></p>
+  <p>Height: <%= user.height %></p>
+  <p>weight: <%= user.weight %></p>
+  <a href="/users/<%= user.id %>">More info</a>
+<% end %>
+
+<div>
+<a href="/users/new">New user</a>
+</div>
+<%# user index will be users that the logged in user follows %>
