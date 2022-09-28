@@ -1,0 +1,18 @@
+<h1>Edit excercise</h1>
+<%= form_with model: @excercise do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+  <div>
+    <%= form.label :excercise_category_id %>
+    <%= form.text_field :excercise_category_id %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end%>

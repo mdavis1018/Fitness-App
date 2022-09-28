@@ -1,0 +1,7 @@
+<h1>excercise info</h1>
+<h2><%= @excercise.name %></h2>
+<p>Description: <%= @excercise.description%></p>
+<a href="/excercises">Back to all excercises</a>
+<a href="/excercises/<%= @excercise.id %>/edit">Edit excercise</a>
+<a href="/excercises/<%= @excercise.id %>" data-turbo-method="delete">Destroy excercise</a>
+</div>

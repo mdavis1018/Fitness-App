@@ -17,14 +17,17 @@ class UsersController < ApplicationController
   def create
     @user = User.new(
       name: params[:user][:name],
-      weight: params[:user][:weight],
-      height: params[:user][:height],
       email: params[:user][:email],
-      password_digest: params[:user][:password_digest],
+      password: params[:user][:password],
+      password_confirmation: params[:user][:password_confirmation],
     )
-    @user.save
-    redirect_to "/users"
-  end
+    if @user.save
+      session[:user_id] = @user.id
+      redirect_to "/"
+    else
+      render :new, status: :unprocessable_entity
+    end
+  en
 
   def edit
     @user = User.find_by(id: params[:id])

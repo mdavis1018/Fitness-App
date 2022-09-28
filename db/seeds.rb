@@ -34,11 +34,13 @@
 # Excercise.create(
 #   name: "Bench Press",
 #   description: "Bench Press is a chest excercise",
+#   excercise_category_id: 1,
 # )
 
 # Excercise.create(
 #   name: "Bicep Curl",
 #   description: "This is an excercise to grow your biceps",
+#   excercise_category_id: 2,
 # )
 
 # WorkoutDetail.create(

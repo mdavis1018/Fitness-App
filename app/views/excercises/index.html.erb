@@ -1,0 +1,8 @@
+<h1>All excercises</h1>
+<% @excercises.each do |excercise| %>
+  <h2><%= excercise.name %></h2>
+  <p>name: <%= excercise.name %></p>
+  <p>Description: <%= excercise.description %></p>
+  <a href="/excercises/<%= excercise.id %>">More info</a>
+<% end %>
+<a href="/excercises/new/">New Excercise</a>
