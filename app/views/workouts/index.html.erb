@@ -1,0 +1,9 @@
+<h1>All workouts</h1>
+<% @workouts.each do |workout| %>
+  <h2><%= workout.title %></h2>
+  <h2><%= workout.user.name %></h2>
+  <a href="/workouts/<%= workout.id %>">More info</a>
+<% end %>
+<div>
+<a href="/workouts/new">New workout</a>
+</div>

@@ -1,0 +1,20 @@
+<h1>workout info</h1>
+<h2><%= @workout.title %></h2>
+
+<% @workout.excercises.each do |idk| %>
+<h2><%= idk.name %></h2>
+<p><%= idk.description %></p>
+<% end %>
+
+
+<% @workout.workout_details.each do |workout| %>
+<p><%= workout.reps %></p>
+<p><%= workout.weight %></p>
+<% end %>
+<a href="/workouts/<%= @workout.id %>/edit">Edit workout</a>
+<div>
+<a href="/workouts">Back to all workouts</a>
+</div>
+<div>
+<a href="/workouts/<%= @workout.id %>" data-turbo-method="delete">Destroy workout</a>
+</div>
