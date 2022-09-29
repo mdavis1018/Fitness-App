@@ -4,16 +4,17 @@
 <% @workout.excercises.each do |idk| %>
 <h2><%= idk.name %></h2>
 <p><%= idk.description %></p>
+<% idk.workout_details.each do |details| %>
+<p><%= details.weight %></p>
+<p><%= details.reps %></p>
+<% end %>
 <% end %>
 
 
-<% @workout.workout_details.each do |workout| %>
-<p><%= workout.reps %></p>
-<p><%= workout.weight %></p>
-<% end %>
 
 
 
+<a href="/workouts/<%= @workout.id %>/excercises">Add an excercise</a>
 <a href="/workouts/<%= @workout.id %>/edit">Edit workout</a>
 <div>
 <a href="/workouts">Back to all workouts</a>

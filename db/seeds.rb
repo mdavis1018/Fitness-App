@@ -5,6 +5,18 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+ExcerciseCategory.create(
+  title: "Chest",
+  description: "This folder holds all chest excercises",
+)
+
+ExcerciseCategory.create(
+  title: "Arms",
+  description: "This folder holds all arm excercises",
+)
+
+
 User.create(
   name: "Marcus",
   email: "marcus@test.com",
@@ -43,10 +55,22 @@ Excercise.create(
   name: "Bench Press", 
   description: "To grow your chest", excercise_category_id: 1,
 )
+Excercise.create(name: "dumbell fly",
+  description: "To grow your chest", 
+  excercise_category_id: 1,)
+
+
+  Excercise.create(name: "Bicep Curls",
+    description: "To grow your biceps", 
+    excercise_category_id: 2,)
+
+    Excercise.create(name: "Hammer curls",
+      description: "To grow your biceps", 
+      excercise_category_id: 2,)
 
 WorkoutDetail.create(
   excercise_id: 1,
-  workout_id: 2,
+  workout_id: 1,
   weight: 100,
   reps: 5,
 )
@@ -57,13 +81,3 @@ WorkoutDetail.create(
   reps: 12,
 )
 
-ExcerciseCategory.create(
-  title: "Chest",
-  description: "This folder holds all chest excercises",
-)
-
-ExcerciseCategory.create(
-  title: "Biceps",
-  description: "This folder holds all bicep excercises",
-)
-p "hello"

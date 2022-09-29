@@ -17,9 +17,12 @@ Rails.application.routes.draw do
 
 
   ## excercises routes
+  resources :workouts 
   resources :excercises do
      resources :workout_details
   end
+
+
   ## sessions routes
   get "/login" => "sessions#new"
   post "/sessions" => "sessions#create"

@@ -14,7 +14,7 @@ class WorkoutDetailsController < ApplicationController
   )
 
    @workout_detail.save!   
-   redirect_to "/excercises"
+   redirect_to workout_path(@workout_detail.workout)
   end
   
 
