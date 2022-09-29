@@ -1,7 +1,31 @@
 <h1>excercise info</h1>
 <h2><%= @excercise.name %></h2>
 <p>Description: <%= @excercise.description%></p>
+
+
+<%= button_to 'Add Workout', {:controller => "workout_details", :action => "create", :excercise_id=> @excercise.id, }, :method=>:post  %>
+
+<%= form_with model: @workout_detail do |form| %>
+  <div style="margin-top: 15px;">
+    <%= form.label :workout_id %><br>
+    <%= form.text_field :workout_id %>
+  </div>
+
+  <div style="margin-top: 15px;">
+    <%= form.label :reps %><br>
+    <%= form.text_area :reps %><br>
+  </div>
+
+   <div style="margin-top: 15px;">
+    <%= form.label :weight %><br>
+    <%= form.text_area :weight %><br>
+  </div>
+
+  <div style="margin-top: 50px; margin-bottom: 40px;">
+    <%= form.submit "Add excercise" %>
+  </div>
+  <% end %>
+
 <a href="/excercises">Back to all excercises</a>
 <a href="/excercises/<%= @excercise.id %>/edit">Edit excercise</a>
 <a href="/excercises/<%= @excercise.id %>" data-turbo-method="delete">Destroy excercise</a>
-</div>

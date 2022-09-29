@@ -1,0 +1,18 @@
+<h1>Workout Details</h1>
+<%= form_with model: @workout_detail do |form| %>
+  <div>
+    <%= form.label :workout_id %>
+    <%= form.text_field :workout_id %>
+  </div>
+  <div>
+    <%= form.label :reps %>
+    <%= form.text_field :reps %>
+  </div>
+  <div>
+    <%= form.label :weight %>
+    <%= form.text_field :weight %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end%>

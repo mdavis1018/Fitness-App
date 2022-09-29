@@ -18,16 +18,18 @@ class UsersController < ApplicationController
     @user = User.new(
       name: params[:user][:name],
       email: params[:user][:email],
+      height: params[:user][:height],
+      weight: params[:user][:weight],
       password: params[:user][:password],
       password_confirmation: params[:user][:password_confirmation],
     )
     if @user.save
       session[:user_id] = @user.id
-      redirect_to "/"
+      redirect_to "/excercise_categories"
     else
       render :new, status: :unprocessable_entity
     end
-  en
+  end
 
   def edit
     @user = User.find_by(id: params[:id])

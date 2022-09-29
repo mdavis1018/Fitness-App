@@ -1,0 +1,8 @@
+POST http://localhost:3000/excercises/1/workout_details
+Content-Type: application/json
+
+{
+  "workout_id": 1,
+    "weight": 100,
+    "reps": 2
+}
