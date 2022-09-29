@@ -6,6 +6,7 @@
 <% @excercise_category.excercises.each do |excercise| %>
 <p><%= excercise.name %></p>
 <p><%= excercise.description %></p>
+ <a href="/excercises/<%= excercise.id %>">More info</a>
 <% end %>
 
 <a href="/excercise_categories">Back to all categories </a>
