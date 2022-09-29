@@ -1,0 +1,6 @@
+<h1>All Categories </h1>
+<% @excercise_category.each do |excercise_category| %>
+  <h2><%= excercise_category.title %></h2>
+  <p>Description: <%= excercise_category.description %></p>
+  <a href="/excercise_categories/<%= excercise_category.id %>">More info</a>
+<% end %>

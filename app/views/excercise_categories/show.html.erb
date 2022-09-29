@@ -1,0 +1,11 @@
+<h1>Category</h1>
+<h2><%= @excercise_category.title %></h2>
+<p>Description: <%= @excercise_category.description%></p>
+
+
+<% @excercise_category.excercises.each do |excercise| %>
+<p><%= excercise.name %></p>
+<p><%= excercise.description %></p>
+<% end %>
+
+<a href="/excercise_categories">Back to all categories </a>
