@@ -1,3 +1,4 @@
+<div style="color:#FFFFFF">
 <h1>Login</h1>
 <%= form_with method: "post", url: "/sessions" do |form| %>
   <div>
@@ -9,6 +10,6 @@
     <%= form.password_field :password %>
   </div>
   <div>
-    <%= form.submit "Submit" %>
+    <%= form.submit "Login", class: "btn btn-outline-light"  %>
   </div>
 <% end%>

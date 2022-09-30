@@ -9,18 +9,26 @@
 ExcerciseCategory.create(
   title: "Chest",
   description: "This folder holds all chest excercises",
+  image_url: "https://www.mz-store.com/blog/wp-content/uploads_en/2018/10/chest.jpg"
 )
 
 ExcerciseCategory.create(
   title: "Arms",
   description: "This folder holds all arm excercises",
+  image_url: "https://a7m2a8t7.rocketcdn.me/wp-content/uploads/2021/09/Lagging-Chest-e1631999652576.jpg"
+)
+
+ExcerciseCategory.create(
+  title: "Quads",
+  description: "This folder holds all quad excercises",
+  image_url: "https://preview.redd.it/6ifxch8p1hp21.jpg?auto=webp&s=b36eef5ffd48a08dfdfac8d29ef3c8702d0a7eab"
 )
 
 
 User.create(
   name: "Marcus",
   email: "marcus@test.com",
-  password_digest: "password",
+  password: "password",
   height: 75,
   weight: 185,
 )
@@ -28,7 +36,7 @@ User.create(
 User.create(
   name: "Tom",
   email: "tom@test.com",
-  password_digest: "password",
+  password: "password",
   height: 70,
   weight: 170,
 )
@@ -36,7 +44,7 @@ User.create(
 User.create(
   name: "Phil",
   email: "phil@test.com",
-  password_digest: "password",
+  password: "password",
   height: 80,
   weight: 190,
 )
