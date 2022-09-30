@@ -1,10 +1,12 @@
-<h1>excercise info</h1>
-<h2><%= @excercise.name %></h2>
-<p>Description: <%= @excercise.description%></p>
 
 
-
-
-<a href="/excercises">Back to all excercises</a>
-<a href="/excercises/<%= @excercise.id %>/workout_details">Add excercise</a>
+<div class="card" style="width: 36rem;">
+  <img class="card-img-top" src="<%= @excercise.image_url %>" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= @excercise.name %></h5>
+    <p class="card-text"><%= @excercise.description%> </p>
+    <a href="/excercises" class="btn btn-dark">Back to all exercises</a>
+    <a href="/excercises/<%= @excercise.id %>/workout_details" class="btn btn-dark">Add exercise to workout</a>
+  </div>
+</div>
 
