@@ -1,11 +1,48 @@
+<div style="color:#FFFFFF">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/workouts">Your Workouts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="excercise_categories">Exercise Categories</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="excercises">Exercises</a>
+      </li>
+    </ul>
+        </div>
+        <div class="navbar-nav ms-auto">
+            <mdb-navbar expand="large" dark color="purple">
+  <mdb-navbar-toggler>
+        <mdb-icon icon="envelope" />
+      </mdb-nav-item>
+      <mdb-dropdown tag="li" class="nav-item avatar" anchorClass="p-0">
+        <mdb-dropdown-toggle tag="a" navLink color="stylish" slot="toggle" waves-fixed>
+                <a href="/users/<%= current_user.id%>">
+                <img
+                src="<%= current_user.image_url%>"
+                class="z-depth-0"
+                style="width: 100px; height: 100px; border-radius: 50%;"
+                alt="avatar image"
+                height="70"
+                /></a>
+
+                
+            </div>
+</nav>
 <h1>User info</h1>
 <h2><%= @user.name %></h2>
-<p>Weight: <%= @user.weight%></p>
-<p>Height: <%= @user.height %></p>
-<a href="/users">Back to all users</a>
+<p>Weight: <%= @user.weight%> lbs</p>
+<p>Height: <%= @user.height %> in</p>
 
 <a href="/users/<%= @user.id %>/edit">Edit user</a>
 
 <div>
 <a href="/users/<%= @user.id %>" data-turbo-method="delete">Destroy user</a>
+</div>
 </div>

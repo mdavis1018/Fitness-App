@@ -55,6 +55,7 @@ User.create(
   password: "password",
   height: 75,
   weight: 185,
+  image_url: "https://preview.redd.it/l6yqa9ixu7k31.jpg?width=640&crop=smart&auto=webp&s=32f14e8ce2937c5efb62538bfff359e587f83df5",
 )
 
 User.create(
