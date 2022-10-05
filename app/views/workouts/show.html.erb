@@ -1,24 +1,45 @@
-<h1>workout info</h1>
-<h2><%= @workout.title %></h2>
+<div style="color:#FFFFFF">
+<h1 style="text-align:center">Workout Information</h1>
+<h2 style="center"><%= @workout.title %></h2>
 
+<div class="container text-center">
+<div class="row row-cols-4 row-cols-md-2 g-4">
 <% @workout.excercises.each do |idk| %>
-<h2><%= idk.name %></h2>
-<p><%= idk.description %></p>
-<% idk.workout_details.each do |details| %>
-<p><%= details.weight %></p>
-<p><%= details.reps %></p>
-<% end %>
-<% end %>
-
-
-
-
-
-<a href="/workouts/<%= @workout.id %>/excercises">Add an excercise</a>
-<a href="/workouts/<%= @workout.id %>/edit">Edit workout</a>
+<div class="col mb-4 d-flex align-items-stretch">
+<div style="color:black">
+        <div class="card h-100">
+        <img src="<%= idk.image_url %>" class="card-img-top"
+        alt="." />
+        <h5 class="card-title">  <%= idk.name %> </h5>
+          <div class="card-body"> <%= idk.description %>
+          </div>
 <div>
-<a href="/workouts">Back to all workouts</a>
+<a href="/workouts/<%= idk.id %>" class="btn btn-dark" data-turbo-method="delete" >Delete Exercise</a>
+</div>
+<% idk.workout_details.each do |details| %>
+<p><%= details.weight %> lbs</p>
+<p><%= details.reps %> reps </p>
+</div>
+</div>
+      </div>
+<% end %>
+<% end %>
+</div>
+</div>
+
+
+
+
+<a href="/excercise_categories" class= "btn btn-light"  >Add an exercise</a>
+<div>
+<a href="/workouts/<%= @workout.id %>/edit" class= "btn btn-light"> Edit workout</a>
 </div>
 <div>
-<a href="/workouts/<%= @workout.id %>" data-turbo-method="delete">Destroy workout</a>
+<a href="/workouts" class= "btn btn-light" >Back to all workouts</a>
+</div>
+<div>
+<a href="/workouts/<%= @workout.id %>" class= "btn btn-light" data-turbo-method="delete" >Delete workout</a>
+</div>
+
+
 </div>

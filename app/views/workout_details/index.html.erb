@@ -1,3 +1,4 @@
+<div style="color:#FFFFFF">
 <h1>Workout Details</h1>
 <%= form_with model: @workout_detail do |form| %>
   <div>
@@ -8,14 +9,17 @@
     <%= form.label :weight %>
     <%= form.text_field :weight %>
   </div>
+  <div class="custom-select" style="width:200px;">
     <%= select_tag(:workout_id, options_for_select(current_user.workouts.map do |workout|
     [workout.title, workout.id]
     end
     )) %>
-
+</div>
   <div>
-    <%= form.submit %>
+    <%= form.submit "Add", class: "btn btn-outline-light" %>
   </div>
 <% end%>
+</div>
+
 
 

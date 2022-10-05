@@ -177,16 +177,5 @@ image_url: "https://media3.giphy.com/media/7YCC7PTNX2TOhJQ6aW/200.gif" )
     image_url: "https://www.strengthlog.com/wp-content/uploads/2020/03/calf-raise-seated.gif")
 
 
-WorkoutDetail.create(
-  excercise_id: 1,
-  workout_id: 1,
-  weight: 100,
-  reps: 5,
-)
-WorkoutDetail.create(
-  excercise_id: 2,
-  workout_id: 1,
-  weight: 45,
-  reps: 12,
-)
+
 

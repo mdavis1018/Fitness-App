@@ -3,13 +3,25 @@
 <h2><%= @excercise_category.title %></h2>
 <p>Description: <%= @excercise_category.description%></p>
 
-
+<div class="container text-center">
+<div class="row row-cols-4 row-cols-md-3 g-4">
 <% @excercise_category.excercises.each do |excercise| %>
-<p><%= excercise.name %></p>
-<p><%= excercise.description %></p>
-<img src="<%= excercise.image_url %>">
- <a href="/excercises/<%= excercise.id %>">More info</a>
-<% end %>
 
-<a href="/excercise_categories">Back to all categories </a>
+ <div class="col mb-4 d-flex align-items-stretch">
+        <div class="card h-100">
+        <img src="<%= excercise.image_url %>" class="card-img-top" />
+        <h5 class="card-title">  <%= excercise.name %> </h5>
+          <div class="card-body"> <%= excercise.description %>
+          <div style=align="left">
+             <a href="/excercises/<%= excercise.id %>" class= "btn btn-dark">More info</a>
+             <a href="/excercises/<%= excercise.id %>/workout_details" class="btn btn-dark">Add exercise to workout</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<% end %>
+</div>
+</div>
+<a href="/excercise_categories" class= "btn btn-light" >Back to all categories </a>
 </div>

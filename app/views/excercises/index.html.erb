@@ -1,5 +1,6 @@
-
+<div style="color:#FFFFFF">
 <h1>All excercises</h1>
+</div>
 <% @excercises.each do |excercise| %>
 
 
@@ -12,8 +13,12 @@
     <img class="card-img-top" src="<%= excercise.image_url %>" alt="Card image cap">
     <a href="/excercises/<%= excercise.id %>" class="btn btn-dark">More info</a>
     
-
+</div>
+</div>
 <% end %>
+<a href="/excercise_categories" class= "btn btn-light" >View categories </a>
+</div>
+
 
 
 
